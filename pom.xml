@@ -135,7 +135,7 @@
       <dependency>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>sonar-maven-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>3.7.0.1746</version>
           <type>pom</type>
       </dependency>
   </dependencies>
@@ -214,7 +214,7 @@
         <plugin>
             <groupId>org.sonarsource.scanner.maven</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
-            <version>3.0.2</version>
+            <version>3.7.0.1746</version>
         </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
