@@ -55,14 +55,14 @@ class PetController {
 		return this.owners.findById(ownerId);
 	}
 
+    @InitBinder("pet")
+    public void initPetBinder(WebDataBinder dataBinder) {
+        dataBinder.setValidator(new PetValidator());
+    }
+
 	@InitBinder("owner")
 	public void initOwnerBinder(WebDataBinder dataBinder) {
 		dataBinder.setDisallowedFields("id");
-	}
-
-	@InitBinder("pet")
-	public void initPetBinder(WebDataBinder dataBinder) {
-		dataBinder.setValidator(new PetValidator());
 	}
 
 	@GetMapping("/pets/new")
