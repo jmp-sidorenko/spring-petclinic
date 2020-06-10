@@ -6,15 +6,16 @@ pipeline {
     }
 
     stages {
-        stage('sonar check') {
-            steps {
-                echo 'Hi, this is Zulaikha from edureka'
-            }
-        }
         stage('test') {
             steps {
                 sh 'mvn test'
             }
         }
+        stage('sonar check') {
+            steps {
+                echo 'Hi, this is Zulaikha from edureka'
+            }
+        }
+
     }
 }
