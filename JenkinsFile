@@ -1,14 +1,12 @@
 pipeline {
     agent any
 
-    tools {
-      maven 'default Maven'
-    }
-
     stages {
         stage('test') {
             steps {
-                sh 'mvn test'
+                withMaven(maven : 'default Maven') {
+                    sh 'mvn test'
+                }
             }
         }
         stage('sonar check') {
