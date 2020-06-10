@@ -1,24 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('One') {
+        stage('sonar check') {
             steps {
                 echo 'Hi, this is Zulaikha from edureka'
             }
         }
-        stage('Two') {
+        stage('test') {
             steps {
-                input('Do you want to proceed?')
-            }
-        }
-        stage('Three') {
-            when{
-                not {
-                    branch "master"
-                }
-            }
-            steps {
-                echo 'Hello'
+                sh 'mvn test'
             }
         }
     }
